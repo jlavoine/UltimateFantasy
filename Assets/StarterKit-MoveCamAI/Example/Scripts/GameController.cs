@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections;
+
+#pragma warning disable 0414
 
 namespace StarterKitMCA {
 	public class GameController : MonoBehaviour {
@@ -64,7 +65,7 @@ namespace StarterKitMCA {
 			camRot = cam.transform.rotation;
 		}
 		
-		void OnGUI()
+		/*void OnGUI()
 		{
 			GUI.backgroundColor = new Color(0.6f,0.7f,0.9f);
 			GUI.DrawTexture(new Rect(5,5,230,245),gridBG);
@@ -109,17 +110,17 @@ namespace StarterKitMCA {
 			
 			// * Exit Game * //
 			ExitGame(); // Display exit game GUI
-		}	
+		}	*/
 	
 		void Update ()
 		{
-			CameraSelection();
-			MovementSelection();
-			SpawnAi();
-			FPSMode();
+			//CameraSelection();
+			//MovementSelection();
+			//SpawnAi();
+			//FPSMode();
 		}
 		
-		void FPSMode()
+		/*void FPSMode()
 		{
 			if(fpsMode)
 			{
@@ -139,9 +140,9 @@ namespace StarterKitMCA {
 	            fpsCursor = cursorHide;
 	            Screen.lockCursor = false;
 	        }
-	    }
+	    }*/
 		
-		void CameraSelection()
+		/*void CameraSelection()
 		{
 			// See OnGUI() section for *Camera Options. The following IF statements are based on a SelectionGrid (radio buttons)
 			if (selCamInt == 0)
@@ -290,9 +291,9 @@ namespace StarterKitMCA {
 				GUI.backgroundColor = Color.green;
 				if(GUI.Button(new Rect(Screen.width/2+5,Screen.height/2,100,25),"Nope!")) // if NO is pressed
 				{
-					exitGame = false;
+					exitGame = false; 
 				}
 			}
-		}
+		}*/
 	}
 }
